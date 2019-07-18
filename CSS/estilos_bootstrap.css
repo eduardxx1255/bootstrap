@@ -1,0 +1,13 @@
+.container {
+    background: teal;
+}
+
+.col-4 {
+    padding: 35px;
+    border: 1px solid white;
+}
+
+.col {
+    padding: 35px;
+    border: 1px solid white;
+}
