@@ -1,8 +1,24 @@
-.container {
-    background:bisque;
-}
+/* .container {
+    background:darkred;
+} */
 
+.col-md-6 {
+    background: darkred;
+    padding: 35px;
+    border: 1px solid white;
+}
+.col-md-3 {
+    background: darkred;
+    padding: 35px;
+    border: 1px solid white;
+}
+.offset-md-3 {
+    background: darkred;
+    padding: 35px;
+    border: 1px solid white;
+}
 .col-lg-3 {
+    background: darkred;
     padding: 35px;
     border: 1px solid white;
 }
