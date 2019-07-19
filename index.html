@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
     <!--HEADER-->
     <header>
-            <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <img src="images/platzi-logo.png" alt="platzi">
@@ -22,22 +22,22 @@
                       <span class="navbar-toggler-icon"></span>
                     </button>
                   
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbar">
                       <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="#">La confernecia</a>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#main">La confernecia</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Los oradores</a>
+                          <a class="nav-link" href="#speakers">Los oradores</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Lugar y fecha</a>
+                          <a class="nav-link" href="#place-time">Lugar y fecha</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Conveiertete en orador</a>
+                          <a class="nav-link" href="#conviertete-en-orador">Conveiertete en orador</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link text-platzi" href="#">Compra de tickets</a>
+                          <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Compra de tickets</a>
                         </li>
                       </ul>
                      </div>
@@ -71,7 +71,7 @@
                   a conocer a miembros del team platzi y aotros studiantes de platziy 
                   a los oradores de primer nivel que hay para ti</p>
                   <a href="#" class="btn btn-outline-light">Quiero ser orador</a>
-                  <button type="button" class="btn btn-platzi">Comprar tickets</button>
+                  <button type="button" class="btn btn-platzi" data-toggle="modal" data-target="#modalCompra">Comprar tickets</button>
               </div>
             </div>
           </div>
@@ -259,6 +259,42 @@
         </div>
     </footer>
     <!--//FOOTER-->
+
+    <!--Modal-->
+    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Comprar tickets</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="form-row">
+                  <div class="form-group col">
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                  </div>
+                </div>
+              </form>
+              <div class="alert alert-warning" role="alert">
+                  Recibirás un correo de confirmación si ganas
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-platzi">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--//Modal-->
  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
